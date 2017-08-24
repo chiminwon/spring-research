@@ -2,10 +2,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>测试springmvc中上传的实现</title>
+		<title>测试SpringMVC中上传的实现</title>
 	</head>
+	
 	<body>
-<form action="upload.do"  method="post" enctype="multipart/form-data">
+		<form action="upload.do"  method="post" enctype="multipart/form-data">
 			<input type="text" name="name" />
 			<input type="file" name="file" />
 			<input type="submit" />

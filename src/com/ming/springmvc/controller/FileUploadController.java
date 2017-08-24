@@ -1,4 +1,4 @@
-package com.ming.springmvc.action;
+package com.ming.springmvc.controller;
 
 import java.io.File;
 import java.util.Date;
@@ -31,9 +31,9 @@ public class FileUploadController implements ServletContextAware {
 			String fileName = file.getOriginalFilename();
 			String fileType = fileName.substring(fileName.lastIndexOf("."));
 			System.out.println(fileType);
-			File file2 = new File(path, new Date().getTime() + fileType); // 新建一个文件
+			File _file = new File(path, new Date().getTime() + fileType); // 新建一个文件
 			try {
-				file.getFileItem().write(file2); // 将上传的文件写入新建的文件中
+				file.getFileItem().write(_file); // 将上传的文件写入新建的文件中
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

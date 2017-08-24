@@ -40,7 +40,7 @@
 			</props>
 		</property>
 		<property name="packagesToScan">
-			<value>com.ming.springmvc.po</value>
+			<value>com.ming.springmvc.pojo</value>
 		</property>
 	</bean>
 
@@ -59,12 +59,15 @@
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	
 	<tx:annotation-driven transaction-manager="txManager" />
+	
 	<aop:config>
 		<aop:pointcut expression="execution(public * com.ming.springmvc.service.impl.*.*(..))"
 			id="businessService" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="businessService" />
 	</aop:config>
+	
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
 			<tx:method name="find*" read-only="true" propagation="NOT_SUPPORTED" />

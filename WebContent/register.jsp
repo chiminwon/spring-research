@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -21,10 +21,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-		<form action="user.do" >
-			用户名：<input type=text name=uname /><br/>
-			<input type=hidden name=method value=reg   />
+		<form action="user" >
+			用户名：<input type=text name=userName /><br/>
+			<input type=hidden name=method value=register />
 			<input type=submit value=注册  />
 		</form>
   </body>
+  
 </html>

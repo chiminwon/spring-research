@@ -5,19 +5,14 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
 
 import com.ming.springmvc.dao.UserDao;
-import com.ming.springmvc.po.User;
+import com.ming.springmvc.pojo.User;
+import com.ming.springmvc.service.UserService;
 
 @Component
-public class UserService {
+public class UserService{
+
 	@Resource
 	private UserDao userDao;
-
-	public void add(String uname) {
-		System.out.println("UserService.add()");
-		User u = new User();
-		u.setUname(uname);
-		userDao.add(u);
-	}
 
 	public UserDao getUserDao() {
 		return userDao;
@@ -27,4 +22,10 @@ public class UserService {
 		this.userDao = userDao;
 	}
 
+	public void add(String userName) {
+		System.out.println("Call UserService.add()");
+		User user = new User();
+		user.setUserName(userName);
+		userDao.add(user);
+	}
 }
