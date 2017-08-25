@@ -1,4 +1,4 @@
-package com.ming.mongodb;
+package com.ming.mongodb.controller;
 
 import java.util.List;
 
@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.ming.mongodb.dao.DemoInfoRepository;
+import com.ming.mongodb.pojo.DemoInfo;
 
 @RestController
 public class DemoController {

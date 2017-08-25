@@ -1,10 +1,9 @@
-package com.ming.mongodb;
+package com.ming.mongodb.pojo;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * 实体类.
- */
+@Document
 public class DemoInfo {
 
 	//id属性是给mongodb用的，用@Id注解修饰

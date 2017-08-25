@@ -1,6 +1,8 @@
-package com.ming.mongodb;
+package com.ming.mongodb.dao;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.ming.mongodb.pojo.DemoInfo;
 
 /**
  * 继承自MongoRepository接口，MongoRepository接口包含了常用的CRUD操作，
