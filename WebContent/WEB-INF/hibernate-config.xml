@@ -12,14 +12,15 @@
   	http://www.springframework.org/schema/context   
    	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
    	
-	<context:component-scan base-package="com.ming" />
+	<context:component-scan base-package="com.ming.springmvc" />
+	
 	<!-- 支持aop注解 -->
 	<aop:aspectj-autoproxy />
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver">
 		</property>
-		<property name="url" value="jdbc:mysql://localhost:3306/myhib"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/springmvc"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="admin"></property>
 	</bean>

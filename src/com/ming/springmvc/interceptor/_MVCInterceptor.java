@@ -5,13 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-public class MyInterceptor2 extends HandlerInterceptorAdapter {
+public class _MVCInterceptor extends HandlerInterceptorAdapter {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		System.out.println("MyInterceptor2.preHandle()");
-		return true; // ¼ÌÐøÖ´ÐÐaction
+		System.out.println("Call :: " + this.getClass().getName());
+		return true; // ç»§ç»­æ‰§è¡Œaction
 	}
 
 }

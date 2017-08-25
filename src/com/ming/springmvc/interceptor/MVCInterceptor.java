@@ -6,26 +6,25 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-public class MyInterceptor implements HandlerInterceptor {
+public class MVCInterceptor implements HandlerInterceptor {
 
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
-		System.out.println("×îºóÖ´ĞĞ£¡£¡£¡Ò»°ãÓÃÓÚÊÍ·Å×ÊÔ´£¡£¡");
-
+		System.out.println("æœ€åæ‰§è¡Œï¼ï¼ï¼ä¸€èˆ¬ç”¨äºé‡Šæ”¾èµ„æºï¼ï¼");
 	}
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
-		System.out.println("ActionÖ´ĞĞÖ®ºó£¬Éú³ÉÊÓÍ¼Ö®Ç°Ö´ĞĞ£¡£¡");
+		System.out.println("Actionæ‰§è¡Œä¹‹åï¼Œç”Ÿæˆè§†å›¾ä¹‹å‰æ‰§è¡Œï¼ï¼");
 	}
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		System.out.println("actionÖ®Ç°Ö´ĞĞ£¡£¡£¡");
-		return true; // ¼ÌĞøÖ´ĞĞaction
+		System.out.println("actionä¹‹å‰æ‰§è¡Œï¼ï¼ï¼");
+		return true; // ç»§ç»­æ‰§è¡Œaction
 	}
 
 }
